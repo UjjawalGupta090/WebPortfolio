@@ -1,0 +1,13 @@
+# Dependency directories
+node_modules/
+handlingContactMe/node_modules/
+
+# Local environment files
+.env
+handlingContactMe/.env
+
+# OS files
+.DS_Store
+
+# Log files
+*.log

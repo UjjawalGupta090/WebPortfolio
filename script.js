@@ -146,3 +146,44 @@ if (themeToggleBtn) {
     localStorage.setItem('theme', newTheme);
   });
 }
+
+// Typewriter Effect
+const typewriterText = document.getElementById('typewriter-text');
+if (typewriterText) {
+  const phrases = [
+    "Full-Stack MERN Developer",
+    "MCA Student @ Galgotias"
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 100;
+
+  function type() {
+    const currentPhrase = phrases[phraseIndex];
+    
+    if (isDeleting) {
+      typewriterText.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 50;
+    } else {
+      typewriterText.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+      typingSpeed = 120;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      typingSpeed = 2000;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+      typingSpeed = 500;
+    }
+
+    setTimeout(type, typingSpeed);
+  }
+
+  typewriterText.textContent = '';
+  setTimeout(type, 1000);
+}
