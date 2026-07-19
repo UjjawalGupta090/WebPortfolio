@@ -897,7 +897,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-top: auto;
+  margin-top: 0.5rem;
 }
 
 .project-tags span {
@@ -907,6 +907,45 @@ h3 {
   background: var(--bg);
   border: var(--border-fine-blur);
   color: var(--text);
+}
+
+.project-actions {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.btn-explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.48rem 0.95rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--bg);
+  border: var(--border-fine-blur);
+  border-radius: var(--radius-md, 8px);
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-explore:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.3);
+}
+
+.btn-explore .explore-icon {
+  transition: transform 0.2s ease;
+}
+
+.btn-explore:hover .explore-icon {
+  transform: translate(2px, -2px);
 }
 
 .contact-grid {
