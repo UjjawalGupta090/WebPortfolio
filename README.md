@@ -32,7 +32,7 @@ I am a Full-Stack MERN Developer currently pursuing a Master of Computer Applica
 
 ## 📂 Project Showcase
 
-### 🍔 [Web Food Store (FeastFast Express)](https://github.com/UjjawalGupta090/FeastFast-Express)
+### 🍔 [FeastFast](https://tomato.ujjawalgupta.online/) — [GitHub Repo](https://github.com/UjjawalGupta090/FeastFast-Express)
 A comprehensive full-stack food ordering platform featuring secure authentication, cart operations, transaction tracking, and an administrative dashboard to manage products and orders.
 * **Stack**: MongoDB, Express.js, React.js, Node.js
 
