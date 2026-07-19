@@ -187,3 +187,21 @@ if (typewriterText) {
   typewriterText.textContent = '';
   setTimeout(type, 1000);
 }
+
+// Warm up free-tier Render deployments in the background
+function warmUpRenderServices() {
+  const services = [
+    'https://lazyscholar.onrender.com/',
+    'https://tomato.ujjawalgupta.online/',
+    'https://tomato-express.onrender.com'
+  ];
+
+  services.forEach(url => {
+    fetch(url, { mode: 'no-cors' }).catch(() => {
+      // Silent catch: network request wakes up Render container in background
+    });
+  });
+}
+
+window.addEventListener('load', warmUpRenderServices);
+
